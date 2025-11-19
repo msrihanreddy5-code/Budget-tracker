@@ -1,0 +1,255 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to bottom right, #dfe9f3, #ffffff);
+  margin: 0;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  max-width: 520px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+h1 {
+  text-align: center;
+  color: #222;
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 24px;
+}
+
+.switch input { display: none; }
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background-color: #ccc;
+  border-radius: 30px;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(22px);
+}
+
+.refresh {
+  background: #6c63ff;
+  color: white;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.refresh:hover {
+  background: #554bff;
+}
+
+body.dark .refresh {
+  background: #7a72ff;
+}
+
+body.dark .refresh:hover {
+  background: #6058ff;
+}
+
+.balance-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.balance-box input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+}
+
+.balance-btn {
+  background: #0077ff;
+  color: white;
+}
+
+.balance-btn:hover {
+  background: #005fcc;
+}
+
+#current-balance {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+form input, form select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.btn {
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.add {
+  background: #28a745;
+  color: white;
+}
+
+.add:hover {
+  background: #218838;
+}
+
+.undo {
+  background: #ff4444;
+  color: white;
+}
+
+.undo:hover {
+  background: #d63030;
+}
+
+#alert {
+  margin: 10px 0;
+  font-weight: bold;
+  color: crimson;
+  min-height: 22px;
+}
+
+
+.chart-select {
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.chart-box {
+  background: #fafafa;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+#entries {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+#entries li {
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #ffffff;
+  border-left: 5px solid transparent;
+  border-radius: 10px;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.08);
+  display: flex;
+  justify-content: space-between;
+}
+
+.income {
+  color: #1e8f3f;
+  font-weight: 600;
+}
+
+.expense {
+  color: #d62828;
+  font-weight: 600;
+}
+
+#entries li.income {
+  border-left-color: #24c36c;
+}
+
+#entries li.expense {
+  border-left-color: #e63946;
+}
+
+body.dark {
+  background: #121212;
+  color: #fff;
+}
+
+body.dark .container {
+  background: #1f1f1f;
+  box-shadow: 0 8px 30px rgba(255,255,255,0.05);
+}
+
+body.dark input,
+body.dark select {
+  background: #2b2b2b;
+  color: white;
+  border: 1px solid #555;
+}
+
+body.dark .chart-box {
+  background: #2a2a2a;
+  box-shadow: 0 2px 12px rgba(255,255,255,0.06);
+}
+
+body.dark #entries li {
+  background: #292929;
+  box-shadow: 0 1px 8px rgba(255,255,255,0.06);
+  color: white;
+}
+
+body.dark .income { color: #7CFF9E; }
+body.dark .expense { color: #FF6A6A; }
+
+body.dark .btn.add { background: #1aaa4d; }
+body.dark .btn.undo { background: #e84c4c; }
+
+body.dark #themeLabel {
+  color: #fff;
+}
