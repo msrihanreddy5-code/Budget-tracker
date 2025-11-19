@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Budget Tracker</title>
+  <link rel="stylesheet" href="get.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <h1> Budget Tracker</h1>
+
+
+    <div class="theme-toggle">
+      <label class="switch">
+        <input type="checkbox" id="themeSwitcher">
+        <span class="slider round"></span>
+      </label>
+      <span id="themeLabel">Light Mode</span>
+    </div>
+
+
+    <button id="refreshApp" class="btn refresh">Refresh App</button>
+
+
+    <div class="balance-box">
+      <input type="number" id="set-balance" placeholder="Enter your budget (₹)">
+      <button id="save-balance" class="btn balance-btn">Save Budget</button>
+    </div>
+
+    <div id="current-balance"></div>
+
+    <form id="entry-form">
+      <input type="number" id="amount" placeholder="Amount (₹)" required>
+      <input type="text" id="category" placeholder="Category" required>
+
+      <select id="type">
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+      </select>
+
+      <button class="btn add" type="submit">Add Entry</button>
+      <button class="btn undo" type="button" id="undo">Undo</button>
+    </form>
+
+    <div id="alert"></div>
+
+    <div class="chart-select">
+      <label>Show Chart:</label>
+      <select id="chart-type">
+        <option value="weekly">Weekly</option>
+        <option value="monthly">Monthly</option>
+      </select>
+    </div>
+
+    <div class="chart-box">
+      <canvas id="chart"></canvas>
+    </div>
+
+    <h2>History</h2>
+    <ul id="entries"></ul>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="budget.js"></script>
+
+</body>
+</html>
